@@ -2,13 +2,13 @@ Git Basic commands and setup
 ============================
 * Install git/git-bash
 
-* Create project directory - We can create files directly inside if we want.
+* Create project directory - We can create files directly inside the repository if we want.
 Eg: touch index.html, touch app.js, touch .gitignore, touch README.md
 
 * The files or directories added in the .gitignore file will not get tracked
 
 ** git init
-(It will add a hidden .git folder inside directory) 
+(This will add a hidden .git folder inside directory) 
 
 ** configuration
 - git config --global user.name 'Sudhil'
@@ -21,7 +21,7 @@ Eg: touch index.html, touch app.js, touch .gitignore, touch README.md
 (Add all the modified files)
 
 - git add index.html
-(Add will only the index.html file)
+(This will only the index.html file)
 
 ** git rm --cache index.html
 (Untrack the tracked file)
@@ -33,10 +33,10 @@ Eg: touch index.html, touch app.js, touch .gitignore, touch README.md
 (To view all the previous commits)
 
 ** git branch branch-name
-(Create a new branch)
+(Create a new branch with branch-name)
 
 ** git checkout branch-name
-(To switch between branches - main branch is master)
+(To switch between branches)
 
 ** git checkout -b branch-name
 (This will create a new branch switch to it together)
@@ -45,23 +45,23 @@ Eg: touch index.html, touch app.js, touch .gitignore, touch README.md
 (This will merge the changes made in one branch to another. For eg. if we are in master branch and run the above command, the branch-name will gets merged to master branch)
 
 
-Remote Repo - Adding/ Pushing the existing local repository to a new remote repo
--------------------------------------------------------------------------------
+Remote Repo - Adding/ Pushing the existing local repository to a new remote repository
+---------------------------------------------------------------------------------------
 * Create a repo in GitHub
 (Add name and description)
 
-** git remote add origin repo-url (repo-url will get from GitHub)
-(The will help us to link our local repository to a remote repository in GitHub)
-(Make sure the main branch name is same in both local and remote (Eg:master or main) Otherwise rename it)
+** git remote add origin repo-url (will get 'repo-url' from GitHub)
+(This will help us to link our local repository to a remote repository in GitHub)
+(Make sure the root branch name is same in both local and remote (Eg:master or main) Otherwise rename it)
 
 ** git push -u origin master
-(This will push the master branch to remote repo in GitHub)
+(This will push the master branch from local repository to remote repository in GitHub)
 
-* Add a README.md file (We can add directly from GitHub or add in local and then push)
+* Add a README.md file (We can add directly from GitHub or we can add in local and then push)
 
 
 ** git pull origin master
-(Pull/Retrieve the latest changes added in the remote to local (Eg: If some other developers may add a new feature))
+(Pull/Retrieve the latest changes added in the remote repository to local repository(Eg: To get changes from an other developer))
 
 ** git pull origin master --rebase
 (This is same as pulling but merge our local master along with the remote master while pulling)
@@ -72,4 +72,4 @@ Clone an existing remote repo
 ** git clone repo-url
 
 
-*** Once we are familiar with all these basic commands, we can use the awesome extensions in the VS code (GUI) like Git History, Git Blame, Git Lens, etc
+*** Once you are familiar with all these basic commands, you can use GUI or the awesome extensions in the IDE (Eg: Extensions like Git History, Git Blame, Git Lens, etc in VS code)
