@@ -1,3 +1,73 @@
 # Learn Git
-This is just a study repository for a beginner. 
+This is just a study repository for a beginner in Git. 
 You can check the 'Git-commands.txt' file for all the basic commands and initial setup.
+
+## Git Basic commands and setup
+- Install git/git-bash
+
+- Create project directory - We can create files directly inside the repository if we want.
+Eg: touch index.html, touch app.js, touch .gitignore, touch README.md
+
+- The files or directories added in the .gitignore file will not get tracked
+
+- git init (This will add a hidden .git folder inside directory) 
+
+### configuration
+- git config --global user.name 'Sudhil'
+- git config --global user.email 'email@gamil.com'
+
+### git status
+- Run anytime if we want to know the status of the git tree
+
+### git add .
+- Add all the modified files
+
+### git add index.html
+- This will only the index.html file
+
+### git rm --cache index.html
+- Untrack the tracked file
+
+### git commit -m 'commit message'
+- Commit the staged changes after adding files with a message
+
+### git log
+- To view all the previous commits
+
+### git branch branch-name
+- Create a new branch with branch-name
+
+### git checkout branch-name
+- To switch between branches
+
+### git checkout -b branch-name
+- This will create a new branch switch to it together
+
+### git merge branch-name
+- This will merge the changes made in one branch to another. For eg. if we are in master branch and run the above command, the branch-name will gets merged to master branch
+
+
+## Remote Repo - Adding/ Pushing the existing local repository to a new remote repository
+* Create a repo in GitHub - (Add name and description)
+
+### git remote add origin repo-url (will get 'repo-url' from GitHub)
+- This will help us to link our local repository to a remote repository in GitHub
+- Make sure the root branch name is same in both local and remote (Eg:master or main), Otherwise rename it.
+
+### git push -u origin master
+- This will push the master branch from local repository to remote repository in GitHub
+
+### Add a README.md file 
+- We can add directly from GitHub or we can add in local and then push
+
+### git pull origin master
+- Pull/Retrieve the latest changes added in the remote repository to local repository(Eg: To get changes from an other developer)
+
+### git pull origin master --rebase
+- This is same as pulling but merge our local master along with the remote master while pulling
+
+## Clone an existing remote repo
+- git clone repo-url
+
+
+Once you are familiar with all these basic commands, you can use GUI or the awesome extensions in the IDE (Eg: Extensions like Git History, Git Blame, Git Lens, etc in VS code)
